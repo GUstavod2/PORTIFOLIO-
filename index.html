@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOTA.CODE</title>
+  <link rel="icon" type="image/png" href="img/LOGO.png" />
+
+  <!-- Tailwind CSS (via CDN) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Devicon -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Custom Styles & Tailwind Config -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js"></script>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <!-- Header -->
+  <header class="bg-surface/80 backdrop-blur-xl border-b border-outline-variant fixed top-0 w-full z-50">
+    <div
+      class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary-fixed" translate="no">terminal</span>
+        <h1 class="font-headline-lg text-headline-lg font-bold tracking-tighter text-primary">hota.code</h1>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#projetos"
+          class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors duration-300">Projetos</a>
+        <a href="#habilidades"
+          class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors duration-300">Habilidades</a>
+        <a href="#sobre-mim"
+          class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors duration-300">Sobre
+          Mim</a>
+        <a href="#contato"
+          class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors duration-300">Contato</a>
+      </nav>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="mobile-menu-btn"
+        class="md:hidden text-primary flex items-center justify-center p-2 rounded-lg hover:bg-surface-container-high transition-colors"
+        aria-label="Menu">
+        <span class="material-symbols-outlined text-2xl" translate="no">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-nav"
+      class="hidden flex-col items-center gap-6 py-6 bg-surface/95 backdrop-blur-xl border-b border-outline-variant w-full absolute top-full left-0 md:hidden shadow-2xl">
+      <a href="#projetos"
+        class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors w-full text-center py-2">Projetos</a>
+      <a href="#habilidades"
+        class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors w-full text-center py-2">Habilidades</a>
+      <a href="#sobre-mim"
+        class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors w-full text-center py-2">Sobre
+        Mim</a>
+      <a href="#contato"
+        class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary-fixed transition-colors w-full text-center py-2">Contato</a>
+    </nav>
+  </header>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section
+      class="min-h-[calc(100vh-6rem)] flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-20 relative overflow-hidden">
+      <div class="z-10 max-w-3xl">
+        <div class="inline-block px-3 py-1 bg-surface-container-high border border-outline-variant rounded-full mb-6">
+          <span class="font-label-caps text-label-caps text-primary-fixed">Disponível Para Novas Oportunidades</span>
+        </div>
+
+        <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-6">
+          hota.code
+        </h2>
+
+        <p class="font-headline-lg text-2xl md:text-headline-lg text-on-surface-variant mb-10 leading-relaxed">
+          Criando soluções robustas com <span class="text-primary-fixed">código limpo</span>. Conecto lógica complexa a
+          uma experiência de usuário perfeita.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-gutter">
+          <a href="#projetos"
+            class="bg-primary-fixed text-on-primary-fixed px-8 py-4 rounded-lg font-label-caps text-label-caps text-center flex items-center justify-center gap-2 hover:brightness-110 transition-all">
+            Ver Projetos
+            <span class="material-symbols-outlined" translate="no">arrow_forward</span>
+          </a>
+          <a href="#contato"
+            class="border border-outline-variant text-primary px-8 py-4 rounded-lg font-label-caps text-label-caps text-center hover:bg-surface-container-high transition-all">
+            Entre em Contato
+          </a>
+        </div>
+      </div>
+
+      <!-- Code Background Decoration -->
+      <div class="absolute right-0 top-1/2 -translate-y-1/2 opacity-10 hidden lg:block pointer-events-none">
+        <pre class="font-code-sm text-code-sm text-primary-fixed leading-tight">
+<code>
+function buildSuccess(passion, skill) {
+  const result = passion.map(p => {
+    return logic.optimize(p + skill);
+  });
+  return result.deploy();
+}
+
+// Initializing hota.code
+const dev = new Developer({
+  name: "hota.code",
+  expertise: "Full-Stack",
+  clean: true
+});
+</code>
+          </pre>
+      </div>
+    </section>
+
+    <!-- Sobre Mim Section -->
+    <section class="bg-surface-container-low py-24 border-y border-outline-variant" id="sobre-mim">
+      <div
+        class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-primary-fixed/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+          </div>
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBizGonTOjUoR0C1XQPnu6diHhhjAgSPIhxOnrThW1wSezyL7XljrpV82Mm8YMbPZjILbnX5MiSX5mm2ZQHqzR13g-NsurbjZQvjeSXjqfDN-s-fjb1KiSM4x3izQ5y3mBX1iTNIqOzPcK9L4iBpbDLKYaPTluMaptL_1FvTzul42FyLeg9Vnq6r5AcooTe2xnjHKGT4OWvIA2EqLCLeYYMitRvscGU7JFlEB77UsgMMPiYqVv0B1hoT5JdIcMMNEmR4GHRKKHbbzU"
+            alt="Workspace de programação"
+            class="relative rounded-xl border border-outline-variant grayscale hover:grayscale-0 transition-all duration-500 w-full aspect-video object-cover" />
+        </div>
+
+        <div>
+          <h3 class="font-label-caps text-label-caps text-primary-fixed mb-4">Sobre Mim</h3>
+          <p class="font-headline-lg text-2xl md:text-headline-lg text-primary mb-6">Experiência em desenvolvimento
+            full-stack e
+            resolução de problemas complexos.</p>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+            Estudante de Engenharia de Software com vários anos de experiência prática em desenvolvimento e um portfólio
+            que abrange desde páginas simples até sistemas complexos. Atuante como desenvolvedor full‑stack, domino
+            Node.js, JavaScript, CSS, React e Python, bem como técnicas de inteligência artificial. Tenho sólida
+            capacidade de análise, foco em escrever código claro e escalável e busco constantemente aprimorar minhas
+            habilidades para entregar soluções inovadoras e de alto impacto.
+          </p>
+
+          <div class="flex gap-8">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative" id="habilidades">
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-fixed/5 blur-[120px] rounded-full pointer-events-none">
+      </div>
+
+      <div class="text-center mb-20 relative z-10">
+        <h3 class="font-label-caps text-label-caps text-primary-fixed mb-4 tracking-[0.2em]">CONJUNTO DE TECNOLOGIAS
+        </h3>
+        <h2 class="font-headline-lg text-headline-lg text-primary">As Ferramentas Que Uso Para Construir o Futuro.</h2>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="overflow-hidden relative z-10 pause-on-hover flex flex-col gap-6"
+        style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+
+        <!-- Row 1: Scroll Left -->
+        <div class="flex gap-6 animate-scroll-left w-max">
+          <!-- Group 1 -->
+          <div class="flex gap-6 shrink-0">
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-scikitlearn-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Scikit-learn</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-plotly-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Plotly</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-blue-400">bar_chart</span><span
+                class="font-code-sm text-on-surface">Seaborn</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-selenium-original colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Selenium</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-green-500">soup_kitchen</span><span
+                class="font-code-sm text-on-surface">Beautiful Soup</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-gray-400">table_chart</span><span
+                class="font-code-sm text-on-surface">OpenPYXL</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-opencv-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">OpenCV</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-yellow-500">smart_display</span><span
+                class="font-code-sm text-on-surface">PyAutoGUI</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-jupyter-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Jupyter</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-purple-500">hexagon</span><span
+                class="font-code-sm text-on-surface">Agno</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-python-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Python</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-linux-plain text-xl text-white"></i><span
+                class="font-code-sm text-on-surface">Linux</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-orange-500">smart_toy</span><span
+                class="font-code-sm text-on-surface">CrewAI</span>
+            </div>
+          </div>
+          <!-- Group 1 Duplicate -->
+          <div class="flex gap-6 shrink-0" aria-hidden="true">
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-scikitlearn-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Scikit-learn</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-plotly-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Plotly</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-blue-400">bar_chart</span><span
+                class="font-code-sm text-on-surface">Seaborn</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-selenium-original colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Selenium</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-green-500">soup_kitchen</span><span
+                class="font-code-sm text-on-surface">Beautiful Soup</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-gray-400">table_chart</span><span
+                class="font-code-sm text-on-surface">OpenPYXL</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-opencv-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">OpenCV</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-yellow-500">smart_display</span><span
+                class="font-code-sm text-on-surface">PyAutoGUI</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-jupyter-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Jupyter</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-purple-500">hexagon</span><span
+                class="font-code-sm text-on-surface">Agno</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-python-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Python</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-linux-plain text-xl text-white"></i><span
+                class="font-code-sm text-on-surface">Linux</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-orange-500">smart_toy</span><span
+                class="font-code-sm text-on-surface">CrewAI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Scroll Right -->
+        <div class="flex gap-6 animate-scroll-right w-max">
+          <!-- Group 2 -->
+          <div class="flex gap-6 shrink-0">
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-docker-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Docker</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-git-plain colored text-xl"></i><span class="font-code-sm text-on-surface">Git</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-github-original text-xl text-white"></i><span
+                class="font-code-sm text-on-surface">GitHub</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-red-400">account_tree</span><span
+                class="font-code-sm text-on-surface">n8n</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-white">memory</span><span
+                class="font-code-sm text-on-surface">OpenAI</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-django-plain text-xl text-green-600"></i><span
+                class="font-code-sm text-on-surface">Django</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-fastapi-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">FastAPI</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-streamlit-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Streamlit</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-html5-plain colored text-xl"></i><span class="font-code-sm text-on-surface">HTML5</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-css3-plain colored text-xl"></i><span class="font-code-sm text-on-surface">CSS3</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-javascript-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">JavaScript</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-azuresqldatabase-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">SQL</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-postgresql-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">PostgreSQL</span>
+            </div>
+          </div>
+          <!-- Group 2 Duplicate -->
+          <div class="flex gap-6 shrink-0" aria-hidden="true">
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-docker-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Docker</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-git-plain colored text-xl"></i><span class="font-code-sm text-on-surface">Git</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-github-original text-xl text-white"></i><span
+                class="font-code-sm text-on-surface">GitHub</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-red-400">account_tree</span><span
+                class="font-code-sm text-on-surface">n8n</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <span class="material-symbols-outlined text-xl text-white">memory</span><span
+                class="font-code-sm text-on-surface">OpenAI</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-django-plain text-xl text-green-600"></i><span
+                class="font-code-sm text-on-surface">Django</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-fastapi-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">FastAPI</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-streamlit-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">Streamlit</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-html5-plain colored text-xl"></i><span class="font-code-sm text-on-surface">HTML5</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-css3-plain colored text-xl"></i><span class="font-code-sm text-on-surface">CSS3</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-javascript-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">JavaScript</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-azuresqldatabase-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">SQL</span>
+            </div>
+            <div
+              class="flex items-center gap-2 glass-card px-5 py-3 rounded-xl hover:border-primary-fixed transition-colors">
+              <i class="devicon-postgresql-plain colored text-xl"></i><span
+                class="font-code-sm text-on-surface">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section class="py-24 bg-surface-container-lowest" id="projetos">
+      <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="flex justify-between items-end mb-16">
+          <div>
+            <h3 class="font-label-caps text-label-caps text-primary-fixed mb-4">Trabalhos Selecionados</h3>
+            <h2 class="font-headline-lg text-headline-lg text-primary">Soluções Comprovadas Para Escala Digital.</h2>
+          </div>
+          <div class="flex flex-col items-end gap-6">
+            <a href="#todos-projetos"
+              class="hidden md:flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors">
+              Todos os Projetos <span class="material-symbols-outlined" translate="no">north_east</span>
+            </a>
+            <div class="flex gap-4">
+              <button id="btn-prev-project" aria-label="Projeto anterior"
+                class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:border-primary-fixed hover:text-primary-fixed hover:bg-primary-fixed/10 transition-all duration-300 hover:scale-105">
+                <span class="material-symbols-outlined" translate="no">arrow_back</span>
+              </button>
+              <button id="btn-next-project" aria-label="Próximo projeto"
+                class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:border-primary-fixed hover:text-primary-fixed hover:bg-primary-fixed/10 transition-all duration-300 hover:scale-105">
+                <span class="material-symbols-outlined" translate="no">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="projects-carousel"
+          class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 pb-8 scroll-smooth">
+          <!-- Projeto 1: Energia Solar (6 colunas) -->
+          <div class="w-[85vw] md:w-[45vw] lg:w-[400px] shrink-0 snap-center group">
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col h-full border border-outline-variant hover:border-primary-fixed transition-all duration-500">
+              <div class="h-80 relative overflow-hidden">
+                <img src="img/site-EnergiaSolar.png" alt="Site de Energia Solar"
+                  class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+              </div>
+
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-primary-fixed/10 text-primary-fixed rounded">HTML5</span>
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-primary-fixed/10 text-primary-fixed rounded">CSS3</span>
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-primary-fixed/10 text-primary-fixed rounded">JavaScript</span>
+                </div>
+                <h4 class="font-headline-lg text-headline-lg text-primary mb-4">Site de Energia Solar</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Plataforma moderna e responsiva
+                  para apresentar serviços de energia solar, focada em conversão e usabilidade.</p>
+                <a href="#"
+                  class="flex items-center gap-2 font-label-caps text-label-caps text-primary-fixed hover:translate-x-1 transition-transform w-fit mt-auto">
+                  Ver Detalhes <span class="material-symbols-outlined" translate="no">north_east</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 2: Teclado (6 colunas) -->
+          <div class="w-[85vw] md:w-[45vw] lg:w-[400px] shrink-0 snap-center group">
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col h-full border border-outline-variant hover:border-primary-fixed transition-all duration-500">
+              <div class="h-80 relative overflow-hidden">
+                <img src="img/site-Teclado.png" alt="Site de Teclados"
+                  class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+              </div>
+
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-secondary-container/10 text-secondary-fixed rounded">E-commerce</span>
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-secondary-container/10 text-secondary-fixed rounded">UI/UX</span>
+                </div>
+                <h4 class="font-headline-lg text-headline-lg text-primary mb-4">Teclados Customizados</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Vitrine interativa para
+                  teclados mecânicos premium com foco em design minimalista.</p>
+                <a href="#"
+                  class="flex items-center gap-2 font-label-caps text-label-caps text-primary-fixed hover:translate-x-1 transition-transform w-fit mt-auto">
+                  Ver Detalhes <span class="material-symbols-outlined" translate="no">north_east</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 3: Extrator de Fotos (6 colunas) -->
+          <div class="w-[85vw] md:w-[45vw] lg:w-[400px] shrink-0 snap-center group">
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col h-full border border-outline-variant hover:border-primary-fixed transition-all duration-500">
+              <div class="h-80 relative overflow-hidden">
+                <img src="img/extrator-De-Fotos.png" alt="Extrator de Fotos"
+                  class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+              </div>
+
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-secondary-container/10 text-secondary-fixed rounded">Python</span>
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-secondary-container/10 text-secondary-fixed rounded">Automação</span>
+                </div>
+                <h4 class="font-headline-lg text-headline-lg text-primary mb-4">Extrator de Fotos</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Ferramenta automatizada em
+                  Python para extração e processamento de imagens em lote de forma rápida e eficiente.</p>
+                <a href="#"
+                  class="flex items-center gap-2 font-label-caps text-label-caps text-primary-fixed hover:translate-x-1 transition-transform w-fit mt-auto">
+                  Ver Código Fonte <span class="material-symbols-outlined" translate="no">code</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 4: Sistema de Contratos (6 colunas) -->
+          <div class="w-[85vw] md:w-[45vw] lg:w-[400px] shrink-0 snap-center group">
+            <div
+              class="glass-card rounded-xl overflow-hidden flex flex-col h-full border border-outline-variant hover:border-primary-fixed transition-all duration-500">
+              <div class="h-80 relative overflow-hidden">
+                <img src="img/sistema-Contratos.png" alt="Sistema de Contratos"
+                  class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+              </div>
+
+              <div class="p-8 flex flex-col flex-1">
+                <div class="flex gap-2 mb-4 flex-wrap">
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-primary-fixed/10 text-primary-fixed rounded">React</span>
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-primary-fixed/10 text-primary-fixed rounded">Node.js</span>
+                  <span
+                    class="font-code-sm text-code-sm px-2 py-0.5 bg-primary-fixed/10 text-primary-fixed rounded">PostgreSQL</span>
+                </div>
+                <h4 class="font-headline-lg text-headline-lg text-primary mb-4">Sistema de Contratos</h4>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">Uma aplicação web completa para
+                  gestão, assinatura e acompanhamento de contratos digitais de forma segura e prática.</p>
+                <a href="#"
+                  class="flex items-center gap-2 font-label-caps text-label-caps text-primary-fixed hover:translate-x-1 transition-transform w-fit mt-auto">
+                  Ver Detalhes <span class="material-symbols-outlined" translate="no">north_east</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center" id="contato">
+      <h3 class="font-label-caps text-label-caps text-primary-fixed mb-4">Colaboração</h3>
+      <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-8 max-w-4xl mx-auto">Tem
+        um
+        desafio complexo? Vamos resolvê-lo juntos.</h2>
+
+      <div class="flex flex-col items-center gap-12">
+        <a href="https://wa.me/5567991999350?text=ola%2Cquero%20desenvolver%20um%20projeto%20" target="_blank"
+          rel="noopener noreferrer"
+          class="bg-primary-fixed text-on-primary-fixed px-8 py-4 md:px-12 md:py-5 rounded-full font-headline-lg text-2xl md:text-headline-lg hover:scale-105 transition-all shadow-[0_0_40px_rgba(195,244,0,0.3)] w-full sm:w-auto inline-block">
+          Vamos Conversar
+        </a>
+
+        <div
+          class="flex flex-col sm:flex-row gap-6 sm:gap-12 border-t border-outline-variant pt-12 w-full justify-center items-center">
+          <a href="https://www.linkedin.com/in/gustavo-garcia-16551b303/"
+            class="text-on-surface-variant hover:text-primary-fixed transition-colors flex items-center gap-2 font-label-caps text-label-caps group">
+            <span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform"
+              translate="no">share</span> LinkedIn
+          </a>
+          <a href="https://github.com"
+            class="text-on-surface-variant hover:text-primary-fixed transition-colors flex items-center gap-2 font-label-caps text-label-caps group">
+            <span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform"
+              translate="no">terminal</span> GitHub
+          </a>
+          <a href="mailto:gusatvoccgarcia@gmail.com"
+            class="text-on-surface-variant hover:text-primary-fixed transition-colors flex items-center gap-2 font-label-caps text-label-caps group">
+            <span class="material-symbols-outlined group-hover:-translate-y-1 transition-transform"
+              translate="no">mail</span> E-mail
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface-container border-t border-outline-variant w-full py-16">
+    <div
+      class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-gutter">
+      <div class="font-label-caps text-label-caps text-on-surface-variant">
+        © 2026 hota.code // construído para performance
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8 mt-6 md:mt-0">
+        <a href="#projetos"
+          class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary-fixed hover:translate-x-1 transition-all duration-300">Projetos</a>
+        <a href="https://linkedin.com"
+          class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary-fixed hover:translate-x-1 transition-all duration-300">LinkedIn</a>
+
+        <a href="#contato"
+          class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary-fixed hover:translate-x-1 transition-all duration-300">Contato</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
